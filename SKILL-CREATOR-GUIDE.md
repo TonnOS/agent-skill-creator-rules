@@ -469,9 +469,45 @@ python3 {baseDir}/scripts/rotate.py input.pdf --angle 90
 ### Well-Structured Skills from ClawHub
 
 1. **skill-creator** - Guide for creating skills
-2. **github** - GitHub CLI integration
+2. **github** - GitHub CLI integration (minimal, example-driven)
 3. **tmux** - Terminal session management
 4. **coolify** - Coolify PaaS API integration
+5. **agentskills-io** - Official AgentSkills specification
+6. **mcp-builder** - MCP server development guide (progressive disclosure)
+7. **coding-agent** - Background process patterns for coding agents
+8. **senior-architect** - Architecture patterns with scripts and references
+
+### Pattern Analysis
+
+#### Pattern: Minimal CLI Skill (github)
+```yaml
+---
+name: github
+description: "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries."
+---
+```
+- **Description**: Short, includes tool name + use cases
+- **Body**: Only examples, no explanations
+- **Lines**: ~50 lines total
+
+#### Pattern: Progressive Disclosure (mcp-builder)
+```
+mcp-builder/
+├── SKILL.md (workflow + navigation)
+└── references/
+    ├── mcp_best_practices.md
+    ├── python_mcp_server.md
+    ├── node_mcp_server.md
+    └── evaluation.md
+```
+- **SKILL.md**: High-level workflow, links to references
+- **References**: Loaded only when needed
+- **Body**: ~200 lines in SKILL.md
+
+#### Pattern: Scripts + Tables (senior-architect)
+- Uses Python scripts for deterministic operations
+- Decision matrices as tables
+- Clear "when to use" sections in description
 
 ### Common Patterns
 
